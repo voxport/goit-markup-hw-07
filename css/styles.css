@@ -10,6 +10,7 @@
   --color-31D0AA: #31d0aa;
 }
 
+/*#region --BASE--*/
 body {
   font-family: "Roboto", sans-serif;
 
@@ -63,10 +64,7 @@ img {
 address {
   font-style: normal;
 }
-
-/*#region --header--*/
-
-/*#endregion ---header---*/
+/*#endregion ---BASE---*/
 
 /* Утилиты */
 .section {
@@ -74,10 +72,19 @@ address {
 }
 
 .container {
-  width: 1158px;
-  padding: 0 15px 0 15px;
-  /* border: 1px solid red; */
-  margin: 0 auto;
+  max-width: 428px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+
+  @media screen and (min-width: 768px) {
+    max-width: 768px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    max-width: 1158px;
+  }
 }
 
 /* Скрытие элемента */
@@ -97,18 +104,18 @@ address {
 
 /* Подсвечивание текущей страницы */
 .current {
-  color: var(--color-404bbf);
+  /* color: var(--color-404bbf); */
 }
 
 .current::after {
-  content: "";
+  /* content: "";
   display: block;
   width: 100%;
   height: 4px;
   border-radius: 2px;
   background-color: var(--color-404bbf);
   position: absolute;
-  bottom: -4px;
+  bottom: -4px; */
 }
 
 /*#region --HEADER--*/
@@ -117,10 +124,16 @@ address {
   border-bottom: 1px solid var(--color-e7e9fc);
   box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08),
     0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08);
+
+  @media screen and (min-width: 768px) and (max-width:1199px) {
+    padding: 16px 0;
+  }
+  
 }
 
 .header__wrapper {
   display: flex;
+  align-items: center;
 }
 
 .header__navigation {
@@ -135,7 +148,11 @@ address {
   text-transform: uppercase;
   line-height: 1.17;
   color: var(--color-4d5ae5);
-  margin-right: 76px;
+
+  @media screen and (min-width: 768px) {
+    margin-right: 120px;
+  }
+  /* margin-right: 76px; */
 }
 
 .header__logo-span {
@@ -143,17 +160,27 @@ address {
 }
 
 .header__navigation-list {
-  display: flex;
-  gap: 40px;
+  display: none;
+
+  @media screen and (min-width: 768px) {
+    display: flex;
+    gap: 40px;
+  }
+}
+
+.header__nav-item {
+  line-height: 1.5;
 }
 
 .header__nav-link {
-  position: relative;
-  font-weight: 500;
-  line-height: 1.5;
-  letter-spacing: 0.02em;
-  padding: 24px 0px;
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+font-weight: 500;
+font-size: 16px;
+line-height: 1.5;
+letter-spacing: 0.02em;
+padding: 10px 0;
+transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  /* position: relative; */
 }
 
 .header__nav-link:hover,
@@ -162,20 +189,38 @@ address {
 }
 
 .header__address {
-  margin-left: auto;
+  display: none;
+
+  @media screen and (min-width: 768px) {
+    display: block;
+    margin-left: auto;
+  }
 }
 
 .header__contact-list {
-  display: flex;
-  gap: 40px;
+  @media screen and (min-width: 1200px) {
+    display: flex;
+    gap: 40px;
+  }
+}
+
+.header__contact-item {
+  line-height: 1.25;
 }
 
 .header__contact-link {
-  line-height: 1.5;
-  letter-spacing: 0.02em;
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.04em;
   color: var(--color-434455);
-  padding: 24px 0px;
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  @media screen and (min-width:1200px) {
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    
+  }
 }
 
 .header__contact-link:hover,
@@ -620,17 +665,16 @@ address {
 }
 
 .footer-subscribe__title {
-font-weight: 500;
-line-height: 1.5;
-letter-spacing: 0.02em;
-color: var(--color-ffffff);
-margin-bottom: 16px;
+  font-weight: 500;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  color: var(--color-ffffff);
+  margin-bottom: 16px;
 }
 
 .footer-subscribe-form {
   display: flex;
 }
-
 
 .footer-subscribe-input {
   width: 264px;
@@ -675,7 +719,7 @@ margin-bottom: 16px;
   cursor: pointer;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-  box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .footer-subscribe-button:hover,
@@ -771,7 +815,6 @@ margin-bottom: 16px;
   line-height: 1.17;
   color: var(--color-8e8f99);
   margin-bottom: 4px;
-
 }
 
 .form-field-wrapper {
