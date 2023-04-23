@@ -107,18 +107,18 @@ address {
 
 /* Подсвечивание текущей страницы */
 .current {
-  /* color: var(--color-404bbf); */
+  color: var(--color-404bbf);
 }
 
 .current::after {
-  /* content: "";
+  content: "";
   display: block;
   width: 100%;
   height: 4px;
   border-radius: 2px;
   background-color: var(--color-404bbf);
   position: absolute;
-  bottom: -4px; */
+  bottom: -4px;
 }
 
 /*#region --HEADER--*/
@@ -154,7 +154,10 @@ address {
   @media screen and (min-width: 768px) {
     margin-right: 120px;
   }
-  /* margin-right: 76px; */
+
+  @media screen and (min-width: 1200px) {
+    margin-right: 76px;
+  }
 }
 
 .header__logo-span {
@@ -179,10 +182,10 @@ address {
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.02em;
-  padding: 10px 0;
+  padding: 24px 0;
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
-  /* position: relative; */
+  position: relative;
 }
 
 .header__nav-link:hover,
@@ -329,6 +332,11 @@ address {
     letter-spacing: 0.02em;
     text-transform: none;
     margin-bottom: 36px;
+
+    @media screen and (min-width:1200px) {
+      margin-bottom: 48px;
+      
+    }
   }
   /* margin: 0 auto 48px auto; */
 }
@@ -760,9 +768,11 @@ address {
 
   @media screen and (min-width:768px) {
     padding: 96px 108px;
-    
   }
-  /* padding: 100px 0; */
+
+  @media screen and (min-width:1200px) {
+    padding: 100px 0;
+  }
 }
 
 .footer__container {
@@ -775,7 +785,10 @@ address {
 
 .footer__contacts-wrapper {
   margin-right: 24px;
-  /* margin-right: 120px; */
+
+  @media screen and (min-width:1200px) {
+    margin-right: 120px;
+  }
 }
 
 .footer__logo-link {
@@ -792,7 +805,6 @@ address {
 
   @media screen and (min-width:768px) {
     text-align: left;
-    
   }
 }
 
@@ -806,12 +818,24 @@ address {
   letter-spacing: 0.02em;
   width: 264px;
   margin: 0 auto 72px auto;
+  text-align: center;
+
+  @media screen and (min-width:1200px) {
+    margin-bottom: 0;
+  }
+
+
     /* width: 264px; */
-  /* color: #e7e9fc; */
 }
 
 .footer__social {
   margin-bottom: 72px;
+
+  @media screen and (min-width:1200px) {
+    margin-right: auto;
+    margin-bottom: 0;
+    
+  }
   /* margin-right: 80px; */
 }
 
@@ -884,7 +908,6 @@ address {
 
 .footer-subscribe-input {
   width: 100%;
-  /* width: 264px; */
   padding: 8px 16px;
   height: 40px;
   font-size: 12px;
@@ -902,7 +925,10 @@ address {
   @media screen and (min-width:768px) {
     width: 264px;
     margin-right: 24px;
-  
+  }
+
+  @media screen and (min-width:1200px) {
+    margin-bottom: 0;
     
   }
 }
