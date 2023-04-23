@@ -596,6 +596,7 @@ address {
     justify-content: space-between;
     gap: 0;
 }
+}
 
 .customers__link {
   color: var(--color-8e8f99);
@@ -755,15 +756,16 @@ address {
 /*#region --FOOTER--*/
 .footer {
   background-color: var(--color-2e2f42);
-  padding: 100px 0;
+  padding: 96px 0;
+  /* padding: 100px 0; */
 }
 
 .footer__container {
-  display: flex;
+  /* display: flex; */
 }
 
 .footer__contacts-wrapper {
-  margin-right: 120px;
+  /* margin-right: 120px; */
 }
 
 .footer__logo-link {
@@ -776,6 +778,7 @@ address {
   color: var(--color-4d5ae5);
   text-transform: uppercase;
   margin-bottom: 16px;
+  text-align: center;
 }
 
 .footer__logo-span {
@@ -783,15 +786,18 @@ address {
 }
 
 .footer__description {
-  width: 264px;
-  color: var(--color-e7e9fc);
+  color: var(--color-f4f4fd);
   line-height: 1.5;
   letter-spacing: 0.02em;
-  color: #e7e9fc;
+  width: 264px;
+  margin: 0 auto 72px auto;
+    /* width: 264px; */
+  /* color: #e7e9fc; */
 }
 
 .footer__social {
-  margin-right: 80px;
+  margin-bottom: 72px;
+  /* margin-right: 80px; */
 }
 
 .footer__social-title {
@@ -800,6 +806,7 @@ address {
   line-height: 1.5;
   letter-spacing: 0.02em;
   color: var(--color-ffffff);
+  text-align: center;
   margin-bottom: 16px;
 }
 
@@ -807,6 +814,7 @@ address {
   width: 208px;
   display: flex;
   justify-content: space-between;
+  margin: 0 auto;
 }
 
 .footer__social-link {
@@ -835,18 +843,21 @@ address {
   line-height: 1.5;
   letter-spacing: 0.02em;
   color: var(--color-ffffff);
+  text-align: center;
   margin-bottom: 16px;
 }
 
 .footer-subscribe-form {
-  display: flex;
+  /* display: flex; */
 }
 
 .footer-subscribe-input {
-  width: 264px;
+  width: 100%;
+  /* width: 264px; */
   padding: 8px 16px;
   height: 40px;
   font-size: 12px;
+  line-height: 2;
   letter-spacing: 0.04em;
   color: #ffffff;
   background: var(--color-2e2f42);
@@ -854,6 +865,7 @@ address {
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
   border-radius: 4px;
   outline: none;
+  margin-bottom: 16px;
   transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -869,7 +881,8 @@ address {
   display: flex;
   align-items: center;
   gap: 16px;
-  margin-left: 23px;
+  margin: 0 auto;
+  /* margin-left: 23px; */
   width: 165px;
   height: 40px;
   color: var(--color-ffffff);
