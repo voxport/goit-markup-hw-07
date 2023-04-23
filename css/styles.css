@@ -784,7 +784,11 @@ address {
 }
 
 .footer__contacts-wrapper {
-  margin-right: 24px;
+
+  @media screen and (min-width:768px) {
+    margin-right: 24px;
+  }
+  
 
   @media screen and (min-width:1200px) {
     margin-right: 120px;
@@ -819,6 +823,10 @@ address {
   width: 264px;
   margin: 0 auto 72px auto;
   text-align: center;
+
+  @media screen and (min-width:768px) {
+    text-align: left;
+  }
 
   @media screen and (min-width:1200px) {
     margin-bottom: 0;
