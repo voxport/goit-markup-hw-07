@@ -144,43 +144,72 @@
       </section>
 
       <!-- SERVICES SECTION -->
-      <!-- <section class="services section">
+      <section class="services section">
         <div class="container">
           <h2 class="services__title">What are we doing</h2>
 
           <ul class="services__list">
             <li class="services__item">
-              <img
-                class="services__img"
-                src="./images/services/services-01.jpg"
-                alt="Research and confirm brands"
-                width="360"
-                height="300"
-              />
+              <picture>
+                <source
+                  srcset="
+                    ./images/services/services-01-1200.jpg    1x,
+                    ./images/services/services-01-1200@2x.jpg 2x
+                  "
+                  media="(min-width: 1200px)"
+                />
+                <img
+                  class="profile__profile-img"
+                  src="./images/services/services-01-1200.jpg"
+                  alt="Research and confirm brands"
+                  width="360"
+                  height="300"
+                  loading="lazy"
+                />
+              </picture>
+
+            <li class="services__item">
+              <picture>
+                <source
+                  srcset="
+                    ./images/services/services-02-1200.jpg    1x,
+                    ./images/services/services-02-1200@2x.jpg 2x
+                  "
+                  media="(min-width: 1200px)"
+                />
+                <img
+                  class="profile__profile-img"
+                  src="./images/services/services-02-1200.jpg"
+                  alt="Bring the key message to the brand's"
+                  width="360"
+                  height="300"
+                  loading="lazy"
+                />
+              </picture>
             </li>
 
             <li class="services__item">
-              <img
-                class="services__img"
-                src="./images/services/services-02.jpg"
-                alt="Bring the key message to the brand's"
-                width="360"
-                height="300"
-              />
-            </li>
-
-            <li class="services__item">
-              <img
-                class="services__img"
-                src="./images/services/services-03.jpg"
-                alt="Design practice focused on digital experiences"
-                width="360"
-                height="300"
-              />
+              <picture>
+                <source
+                  srcset="
+                    ./images/services/services-03-1200.jpg    1x,
+                    ./images/services/services-03-1200@2x.jpg 2x
+                  "
+                  media="(min-width: 1200px)"
+                />
+                <img
+                  class="profile__profile-img"
+                  src="./images/services/services-03-1200.jpg"
+                  alt="Design practice focused on digital experiences"
+                  width="360"
+                  height="300"
+                  loading="lazy"
+                />
+              </picture>
             </li>
           </ul>
         </div>
-      </section> -->
+      </section>
 
       <!-- TEAM SECTION -->
       <!-- <section class="team section">
