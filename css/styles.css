@@ -1236,7 +1236,8 @@ address {
 }
 
 .mobile-menu-btn {
-  background-color: transparent;
+  background-color: var(--color-ffffff);
+  /* background-color: transparent; */
   border: none;
   width: 40px;
   height: 40px;
@@ -1249,7 +1250,7 @@ address {
 }
 
 .mobile-menu-btn:hover, .mobile-menu-btn:focus {
-  fill: var(--accent-color);
+  fill: var(--color-404bbf);
 }
 
 .mobile-menu-burger {
@@ -1373,4 +1374,8 @@ address {
 
 .mobile-menu__social-link-icon {
   fill: currentColor;
+}
+
+.mobile-menu-close {
+ background-color: red;
 }
