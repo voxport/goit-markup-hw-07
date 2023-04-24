@@ -31,7 +31,6 @@
           <a class="header__navigation-logo" href="./index.html"
             >Web<span class="header__logo-span">Studio</span></a
           >
-
           <ul class="header__navigation-list">
             <li class="header__nav-item">
               <a class="header__nav-link current" href="./index.html">Studio</a>
@@ -46,6 +45,76 @@
             </li>
           </ul>
         </nav>
+
+        <!-- mobile-menu -->
+        <div class="mobile-menu" id="mobile-menu" data-menu>
+          <ul class="mobile-menu__nav">
+            <li class="mobile-menu__nav-item">
+              <a class="mobile-menu__nav-link mobile-menu__nav-link--current" href="./index.html"
+                >Studio
+              </a>
+            </li>
+            <li class="mobile-menu__nav-item">
+              <a class="mobile-menu__nav-link" href="./portfolio.html">Portfolio</a>
+            </li>
+            <li class="mobile-menu__nav-item">
+              <a class="mobile-menu__nav-link" href="#">Contacts</a>
+            </li>
+          </ul>
+          <ul class="mobile-menu__contacts">
+            <li class="mobile-menu__contacts-item">
+              <a class="mobile-menu__contacts--tel" href="tel:+110001111111">+11 (000) 111-11-11</a>
+            </li>
+            <li class="mobile-menu__contacts-item">
+              <a class="mobile-menu__contacts--email" href="mailto:info@devstudio.com"
+                >info@devstudio.com</a
+              >
+            </li>
+          </ul>
+          <ul class="mobile-menu__socials">
+            <li class="mobile-menu__socials-item">
+              <a class="mobile-menu__social-link" href="#">
+                <svg class="mobile-menu__social-link-icon" width="24" height="24">
+                  <use href="./images/icons.svg#icon-instagram"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="mobile-menu__socials-item">
+              <a class="mobile-menu__social-link" href="#">
+                <svg class="mobile-menu__social-link-icon" width="24" height="24">
+                  <use href="./images/icons.svg#icon-twitter"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="mobile-menu__socials-item">
+              <a class="mobile-menu__social-link" href="#">
+                <svg class="mobile-menu__social-link-icon" width="24" height="24">
+                  <use href="./images/icons.svg#icon-facebook"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="mobile-menu__socials-item">
+              <a class="mobile-menu__social-link" href="#">
+                <svg class="mobile-menu__social-link-icon" width="24" height="24">
+                  <use href="./images/icons.svg#icon-linkedin"></use>
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <button
+          class="mobile-menu-btn is-open"
+          type="button"
+          aria-label="мобільне меню"
+          aria-expanded="false"
+          aria-controls="mobile-menu"
+          data-menu-button
+        >
+          <svg class="mobile-menu-icon" width="32" height="22">
+            <use class="mobile-menu-burger" href="./images/icons.svg#icon-burger"></use>
+            <use class="mobile-menu-close" href="./images/icons.svg#icon-close-burger-btn"></use>
+          </svg>
+        </button>
 
         <!-- Блок контактной информации -->
         <address class="header__address">
@@ -717,7 +786,9 @@
             </div>
 
             <label class="check-wrapper">
-              <input class="check-input" type="checkbox" />
+              <input class="check-input" type="checkbox" 
+              
+              />
               <svg class="check-icon-complete" width="16" height="16">
                 <use href="./images/icons.svg#icon-check-complete"></use>
               </svg>
@@ -733,5 +804,6 @@
     </div>
 
     <script src="./js/modal.js"></script>
+    <script src="./js/mobile-menu.js"></script>
   </body>
 </html>
