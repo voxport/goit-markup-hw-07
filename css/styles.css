@@ -1247,6 +1247,10 @@ address {
   justify-content: center;
   background-color: transparent;
   border: none;
+
+  @media screen and (min-width:768px) {
+    display: none;
+  }
 }
 
 .burger-close {
@@ -1259,6 +1263,8 @@ address {
   border-radius: 50%;
   border: 1px solid #E7E9FC;
   background-color: #ffffff;
+
+
 }
 
 /* .menu-toggle:hover,
@@ -1273,7 +1279,7 @@ address {
   left: 0;
   width: 100vw;
   height: 100vh;
-  padding: 24px 24px 40px 40px;
+  padding: 80px 24px 40px 40px;
   background-color: #ffffff;
   z-index: 999;
 
@@ -1282,6 +1288,10 @@ address {
 
   display: flex;
   flex-direction: column;
+
+  /* @media screen and (min-width:768px) {
+    display: none;
+  } */
 }
 
 .menu-container.is-open {
@@ -1295,3 +1305,93 @@ address {
   max-width: 480px;
 }
 
+.burger-close:hover,
+.burger-close:focus {
+  background-color:#E7E9FC;
+}
+
+.mobile-navigation__menu-list {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  margin-bottom: auto;
+}
+
+.mobile-navigation__menu-item {
+}
+
+.mobile-navigation__menu-link {
+font-weight: 700;
+font-size: 36px;
+line-height: 1.11;
+letter-spacing: 0.02em;
+text-transform: capitalize;
+color: var(--color-2e2f42);
+}
+
+.mobile-navigation__menu-link:hover,
+.mobile-navigation__menu-link:focus {
+  color: var(--color-404bbf);
+}
+
+.mobile-contacts_list {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  margin-bottom: 48px;
+}
+.mobile-contacts_item {
+}
+
+.mobile-contacts_link {
+  letter-spacing: 0.02em;
+  color: var(--color-434455);
+}
+
+.mobile-contacts_link:hover,
+.mobile-contacts_link:focus {
+  color: var(--color-404bbf);
+}
+
+.mobile-contacts__tel {
+font-weight: 700;
+font-size: 36px;
+line-height: 1.11;
+letter-spacing: 0.02em;
+text-transform: capitalize;
+}
+
+.mobile-contacts__mail {
+font-weight: 500;
+font-size: 20px;
+line-height: 1.2;
+}
+
+.mobile__social-list {
+  display: flex;
+  justify-content: space-between;
+}
+.mobile__social-item {
+}
+
+.mobile__social-links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  padding: 8px;
+  border-radius: 50%;
+  background-color: var(--color-4d5ae5);
+  color: var(--color-ffffff);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.mobile__social-links:hover,
+.mobile__social-links:focus {
+  background-color: var(--color-404bbf);
+}
+
+.mobile__social-icon {
+  fill: currentColor;
+}
