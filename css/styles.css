@@ -1149,13 +1149,19 @@ address {
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+.checkbox {
+  position: relative;
+}
+
 .check-wrapper {
-  display: flex;
+  position: absolute;
+  left: 0;
+  /* display: flex;
   align-items: center;
   justify-content: center;
   margin-bottom: 24px;
   gap: 8px;
-  cursor: pointer;
+  cursor: pointer; */
 }
 
 .check-input {
@@ -1168,7 +1174,6 @@ address {
   clip-path: inset(100%);
   clip: rect(0 0 0 0);
   overflow: hidden;
-  position: relative;
 }
 
 .check-input:checked ~ .check-icon-complete {
@@ -1179,7 +1184,7 @@ address {
 }
 
 .check-icon-complete {
-  /* position: absolute; */
+  position: absolute;
   left: 0;
   fill: transparent;
   border: 2px var(--color-8e8f99) solid;
