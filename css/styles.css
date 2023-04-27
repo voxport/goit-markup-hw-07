@@ -211,12 +211,19 @@ address {
 }
 
 .header__contact-item {
-  line-height: 1.25;
+  /* line-height: 1.25; */
+}
+
+.header__contact-list {
+  font-size: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
 }
 
 .header__contact-link {
   font-size: 12px;
-  line-height: 1.17;
+  /* line-height: 1.17; */
   letter-spacing: 0.04em;
   color: var(--color-434455);
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -572,10 +579,11 @@ address {
 /*#region --CUSTOMERS SECTION--*/
 .customers {
   @media screen and (min-width: 768px) and (max-width: 1199px) {
-    padding-left: 93px;
-    padding-right: 93px;
+    width: 581px;
+    margin: 0 auto;
   }
 }
+
 .customers__title {
   font-weight: 700;
   font-size: 36px;
@@ -786,9 +794,9 @@ address {
   background-color: var(--color-2e2f42);
   padding: 96px 0;
 
-  /* @media screen and (min-width: 1200px) { */
-    /* padding: 100px 0; */
-  /* } */
+  @media screen and (min-width: 1200px) {
+    padding: 100px 0;
+  }
 }
 
 .footer__container {
@@ -798,6 +806,11 @@ address {
     flex-wrap: wrap;
     gap: 72px 24px;
   }
+
+  @media screen and (min-width: 1200px) {
+    width: 100%;
+    gap: 0;
+  }
 }
 
 .footer__contacts-wrapper {
@@ -806,13 +819,11 @@ address {
   @media screen and (min-width: 768px) {
     width: 264px;
     margin: 0;
-    /* margin-right: 24px; */
-    /* margin-bottom: 0; */
   }
 
-  /* @media screen and (min-width: 1200px) { */
-    /* margin-right: 120px; */
-  /* } */
+  @media screen and (min-width: 1200px) {
+    margin-right: 120px;
+  }
 }
 
 .footer__logo-link {
@@ -840,21 +851,6 @@ address {
   color: var(--color-f4f4fd);
   line-height: 1.5;
   letter-spacing: 0.02em;
-  /* width: 268px; */
-  /* margin: 0 auto; */
-
-  @media screen and (min-width: 768px) {
-    /* text-align: left; */
-    /* margin: 0; */
-    /* width: 264px; */
-    /* font-weight: 400; */
-  }
-
-  /* @media screen and (min-width: 1200px) { */
-    /* margin-bottom: 0; */
-  /* } */
-
-  /* width: 264px; */
 }
 
 .footer__social {
@@ -865,11 +861,8 @@ address {
   }
 
   @media screen and (min-width: 1200px) {
-    /* margin-right: auto; */
-    /* margin-bottom: 0; */
+    margin-right: auto;
   }
-  /* margin-right: 80px; */
-/* } */
 }
 
 .footer__social-title {
@@ -887,12 +880,9 @@ address {
 }
 
 .footer__social-list {
-  /* width: 208px; */
   display: flex;
   gap: 16px;
   justify-content: center;
-  /* justify-content: space-between; */
-  /* margin: 0 auto; */
 }
 
 .footer__social-link {
@@ -917,7 +907,7 @@ address {
 }
 
 .footer-subscribe-wrapper {
-  @media screen and (min-width:768px) {
+  @media screen and (min-width: 768px) {
     width: 453px;
   }
 }
@@ -943,7 +933,6 @@ address {
     /* display: flex; */
     flex-wrap: nowrap;
   }
-  /* display: flex; */
 }
 
 .footer-subscribe-input {
@@ -968,11 +957,6 @@ address {
     margin-bottom: 0;
   }
 }
-
-  /* @media screen and (min-width: 1200px) { */
-    /* margin-bottom: 0; */
-  /* } */
-/* } */
 
 .footer-subscribe-input:focus {
   border: 1px solid var(--color-4d5ae5);
@@ -1173,6 +1157,8 @@ address {
   margin-bottom: 24px;
   gap: 8px;
   cursor: pointer;
+
+  position: relative;
 }
 
 .check-input {
@@ -1185,7 +1171,9 @@ address {
   clip-path: inset(100%);
   clip: rect(0 0 0 0);
   overflow: hidden;
-  position: relative;
+  
+  position: absolute;
+  left: 0;
 }
 
 .check-input:checked ~ .check-icon-complete {
@@ -1196,7 +1184,7 @@ address {
 }
 
 .check-icon-complete {
-  /* position: absolute; */
+  position: absolute;
   left: 0;
   fill: transparent;
   border: 2px var(--color-8e8f99) solid;
@@ -1211,6 +1199,7 @@ address {
   line-height: 14px;
   letter-spacing: 0.04em;
   color: var(--color-8e8f99);
+  padding-left: 16px;
 }
 
 .form-recall-button {
@@ -1372,6 +1361,7 @@ address {
   line-height: 1.11;
   letter-spacing: 0.02em;
   text-transform: capitalize;
+  color: var(--color-4d5ae5);
 }
 
 .mobile-contacts__mail {
@@ -1382,7 +1372,7 @@ address {
 
 .mobile__social-list {
   display: flex;
-  justify-content: space-between;
+  gap: 56px;
 }
 .mobile__social-item {
 }
@@ -1407,4 +1397,8 @@ address {
 
 .mobile__social-icon {
   fill: currentColor;
+}
+
+.current_mobile {
+  color: var(--color-404bbf);
 }

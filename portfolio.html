@@ -31,7 +31,6 @@
           <a class="header__navigation-logo" href="./index.html"
             >Web<span class="header__logo-span">Studio</span></a
           >
-
           <ul class="header__navigation-list">
             <li class="header__nav-item">
               <a class="header__nav-link" href="./index.html">Studio</a>
@@ -46,6 +45,80 @@
             </li>
           </ul>
         </nav>
+
+        <button
+          class="burger-button menu-toggle js-open-menu"
+          aria-expanded="false"
+          aria-controls="mobile-menu"
+        >
+          <svg width="30" height="19">
+            <use href="./images/icons.svg#icon-burger"></use>
+          </svg>
+        </button>
+
+        <!-- mobile-menu -->
+        <div class="menu-container js-menu-container" id="mobile-menu">
+          <button class="burger-close js-close-menu">
+            <svg width="24" height="24">
+              <use href="./images/icons.svg#icon-burger-close"></use>
+            </svg>
+          </button>
+
+          <ul class="mobile-navigation__menu-list">
+            <li class="mobile-navigation__menu-item">
+              <a class="mobile-navigation__menu-link" href="./index.html">Studio</a>
+            </li>
+
+            <li class="mobile-navigation__menu-item">
+              <a class="mobile-navigation__menu-link current_mobile" href="./portfolio.html">Portfolio</a>
+            </li>
+
+            <li class="mobile-navigation__menu-item">
+              <a class="mobile-navigation__menu-link" href="#">Contacts</a>
+            </li>
+          </ul>
+
+          <ul class="mobile-contacts_list">
+            <li class="mobile-contacts_item">
+              <a class="mobile-contacts_link mobile-contacts__tel" href="tel:+110001111111">+11 (000) 111-11-11</a>
+            </li>
+
+            <li class="mobile-contacts_item">
+              <a class="mobile-contacts_link mobile-contacts__mail" href="mailto:info@devstudio.com">info@devstudio.com</a>
+            </li>
+          </ul>
+
+          <ul class="mobile__social-list">
+            <li class="mobile__social-item">
+              <a class="mobile__social-links" href="#">
+                <svg class="mobile__social-icon" width="40" height="40">
+                  <use href="./images/icons.svg#icon-instagram"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="mobile__social-item">
+              <a class="mobile__social-links" href="#">
+                <svg class="mobile__social-icon" width="40" height="40">
+                  <use href="./images/icons.svg#icon-twitter"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="mobile__social-item">
+              <a class="mobile__social-links" href="#">
+                <svg class="mobile__social-icon" width="40" height="40">
+                  <use href="./images/icons.svg#icon-facebook"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="mobile__social-item">
+              <a class="mobile__social-links" href="#">
+                <svg class="mobile__social-icon" width="40" height="40">
+                  <use href="./images/icons.svg#icon-linkedin"></use>
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </div>
 
         <!-- Блок контактной информации -->
         <address class="header__address">
@@ -547,11 +620,9 @@
         </div>
 
         <div class="footer-subscribe-wrapper">
-            <p class="footer-subscribe__title">Subscribe</p>
+          <p class="footer-subscribe__title">Subscribe</p>
           <form class="footer-subscribe-form" name="subscribe">
-            <label class="subscribe-email" for="subscribe-email"
-              ></label
-            >
+            <label class="subscribe-email" for="subscribe-email"></label>
             <input
               class="footer-subscribe-input"
               type="email"
@@ -569,5 +640,7 @@
         </div>
       </div>
     </footer>
+
+    <script src="./js/mobile-menu.js"></script>
   </body>
 </html>
