@@ -11,12 +11,4 @@
   function toggleModal() {
     refs.modal.classList.toggle("is-hidden");
   }
-
-  const inputWrapper = document.querySelector(".checkbox");
-  const input = document.querySelector("#check")
-  inputWrapper.addEventListener("click", function(event){
-    if(event.target !== input) {
-      event.preventDefault()
-    }
-  })
 })();
