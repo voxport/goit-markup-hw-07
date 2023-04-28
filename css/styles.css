@@ -1155,55 +1155,46 @@ address {
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.checkbox {
-  /* position: relative; */
+.checkbox-container {
+  margin-bottom: 24px;
 }
 
-.check-wrapper {
+.checkbox-input {
+  position: absolute;
+  opacity: 0;
+}
+
+.checkbox-label {
   display: flex;
   align-items: center;
-  margin-bottom: 24px;
-  gap: 8px;
-  cursor: pointer;
 }
 
-.check-input {
-  /* position: absolute; */
-  width: 10px;
-  height: 10px;
-  margin: -1px;
-  border: 0;
-  padding: 0;
-  white-space: nowrap;
-  clip-path: inset(100%);
-  clip: rect(0 0 0 0);
-  overflow: hidden;
-}
-
-.check-input:checked ~ .check-icon-complete {
-  fill: var(--color-f4f4fd);
-  background-color: var(--color-404bbf);
-  border: 0px solid var(--color-4d5ae5);
-  padding: 4px 3px;
-}
-
-.check-icon-complete {
-  /* position: absolute; */
+.checkbox-icon {
   flex-shrink: 0;
+  width: 16px;
+  height: 16px;
+  fill: none;
+  margin-right: 8px;
   fill: transparent;
   border: 2px var(--color-8e8f99) solid;
   border-radius: 2px;
   transition: fill 250ms, border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.check-privacy-text {
+.checkbox-input:checked + .checkbox-icon {
+  fill: #ffffff;
+  background-color: var(--color-404bbf);
+  border: none;
+  padding: 4px 3px;
+}
+
+.checkbox-text {
   display: block;
   line-height: 1.17;
   font-size: 12px;
   line-height: 14px;
   letter-spacing: 0.04em;
   color: var(--color-8e8f99);
-  /* padding-left: 24px; */
 }
 
 .form-recall-button {
