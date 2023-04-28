@@ -818,7 +818,8 @@ address {
 }
 
 .footer__contacts-wrapper {
-  margin-bottom: 72px;
+  margin: 0 auto 72px auto;
+  width: 268px;
 
   @media screen and (min-width: 768px) {
     width: 264px;
